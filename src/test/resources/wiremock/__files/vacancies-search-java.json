@@ -1,0 +1,38 @@
+{
+  "items": [
+    {
+      "id": "100000001",
+      "name": "Java Developer",
+      "alternate_url": "https://hh.ru/vacancy/100000001",
+      "url": "https://api.hh.ru/vacancies/100000001",
+      "salary": {"from": 250000, "to": 350000, "currency": "RUR", "gross": false},
+      "employer": {"id": "1455", "name": "Яндекс", "trusted": true, "alternate_url": "https://hh.ru/employer/1455"},
+      "area": {"id": "1", "name": "Москва"},
+      "archived": false
+    },
+    {
+      "id": "100000002",
+      "name": "Senior Java Developer",
+      "alternate_url": "https://hh.ru/vacancy/100000002",
+      "url": "https://api.hh.ru/vacancies/100000002",
+      "salary": {"from": 400000, "to": null, "currency": "RUR", "gross": true},
+      "employer": {"id": "3529", "name": "СБЕР", "trusted": true, "alternate_url": "https://hh.ru/employer/3529"},
+      "area": {"id": "1", "name": "Москва"},
+      "archived": false
+    },
+    {
+      "id": "100000003",
+      "name": "Java Backend Engineer",
+      "alternate_url": "https://hh.ru/vacancy/100000003",
+      "url": "https://api.hh.ru/vacancies/100000003",
+      "salary": null,
+      "employer": {"id": "78638", "name": "Тинькофф", "trusted": true, "alternate_url": "https://hh.ru/employer/78638"},
+      "area": {"id": "2", "name": "Санкт-Петербург"},
+      "archived": false
+    }
+  ],
+  "found": 1234,
+  "pages": 25,
+  "page": 0,
+  "per_page": 50
+}

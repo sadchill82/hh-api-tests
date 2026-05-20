@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "id": "100000001",
+      "name": "Java Developer",
+      "alternate_url": "https://hh.ru/vacancy/100000001",
+      "salary": {"from": 250000, "to": 350000, "currency": "RUR", "gross": false},
+      "employer": {"id": "1455", "name": "Яндекс", "trusted": true},
+      "area": {"id": "1", "name": "Москва"},
+      "archived": false
+    },
+    {
+      "id": "100000002",
+      "name": "Senior Java Developer",
+      "alternate_url": "https://hh.ru/vacancy/100000002",
+      "salary": {"from": 400000, "to": null, "currency": "RUR", "gross": true},
+      "employer": {"id": "3529", "name": "СБЕР", "trusted": true},
+      "area": {"id": "1", "name": "Москва"},
+      "archived": false
+    }
+  ],
+  "found": 850,
+  "pages": 17,
+  "page": 0,
+  "per_page": 50
+}

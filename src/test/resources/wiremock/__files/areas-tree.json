@@ -1,0 +1,29 @@
+[
+  {
+    "id": "113",
+    "parent_id": null,
+    "name": "Россия",
+    "areas": [
+      {"id": "1", "parent_id": "113", "name": "Москва", "areas": []},
+      {"id": "2", "parent_id": "113", "name": "Санкт-Петербург", "areas": []},
+      {"id": "40", "parent_id": "113", "name": "Нижний Новгород", "areas": []},
+      {"id": "1620", "parent_id": "113", "name": "Йошкар-Ола", "areas": []}
+    ]
+  },
+  {
+    "id": "16",
+    "parent_id": null,
+    "name": "Беларусь",
+    "areas": [
+      {"id": "1002", "parent_id": "16", "name": "Минск", "areas": []}
+    ]
+  },
+  {
+    "id": "40",
+    "parent_id": null,
+    "name": "Казахстан",
+    "areas": [
+      {"id": "159", "parent_id": "40", "name": "Алматы", "areas": []}
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "priority": 3,
+  "request": {
+    "method": "GET",
+    "urlPath": "/vacancies",
+    "queryParameters": {
+      "per_page": {"equalTo": "5"}
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {"Content-Type": "application/json; charset=utf-8"},
+    "bodyFileName": "vacancies-perpage-5.json"
+  }
+}

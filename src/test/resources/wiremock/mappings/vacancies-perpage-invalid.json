@@ -1,0 +1,15 @@
+{
+  "priority": 2,
+  "request": {
+    "method": "GET",
+    "urlPath": "/vacancies",
+    "queryParameters": {
+      "per_page": {"equalTo": "999"}
+    }
+  },
+  "response": {
+    "status": 400,
+    "headers": {"Content-Type": "application/json; charset=utf-8"},
+    "bodyFileName": "vacancies-validation-error.json"
+  }
+}

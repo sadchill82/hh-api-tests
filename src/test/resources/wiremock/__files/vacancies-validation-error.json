@@ -1,0 +1,5 @@
+{
+  "errors": [{"type": "bad_argument", "value": "per_page"}],
+  "request_id": "test-stub-request-id-400",
+  "description": "per_page is out of range"
+}

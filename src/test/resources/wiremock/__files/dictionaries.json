@@ -1,0 +1,29 @@
+{
+  "experience": [
+    {"id": "noExperience", "name": "Нет опыта"},
+    {"id": "between1And3", "name": "От 1 года до 3 лет"},
+    {"id": "between3And6", "name": "От 3 до 6 лет"},
+    {"id": "moreThan6", "name": "Более 6 лет"}
+  ],
+  "employment": [
+    {"id": "full", "name": "Полная занятость"},
+    {"id": "part", "name": "Частичная занятость"},
+    {"id": "project", "name": "Проектная работа"},
+    {"id": "volunteer", "name": "Волонтёрство"},
+    {"id": "probation", "name": "Стажировка"}
+  ],
+  "currency": [
+    {"code": "RUR", "abbr": "₽", "name": "Российский рубль", "in_use": true},
+    {"code": "USD", "abbr": "$", "name": "Доллар США", "in_use": true},
+    {"code": "EUR", "abbr": "€", "name": "Евро", "in_use": true},
+    {"code": "BYR", "abbr": "Br", "name": "Белорусский рубль", "in_use": true},
+    {"code": "KZT", "abbr": "₸", "name": "Тенге", "in_use": true}
+  ],
+  "schedule": [
+    {"id": "fullDay", "name": "Полный день"},
+    {"id": "shift", "name": "Сменный график"},
+    {"id": "flexible", "name": "Гибкий график"},
+    {"id": "remote", "name": "Удалённая работа"},
+    {"id": "flyInFlyOut", "name": "Вахтовый метод"}
+  ]
+}

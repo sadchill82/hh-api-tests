@@ -1,0 +1,4 @@
+{
+  "errors": [{"type": "not_found", "value": "vacancy_not_found"}],
+  "request_id": "test-stub-request-id-999"
+}

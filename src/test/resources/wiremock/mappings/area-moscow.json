@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/areas/1"
+  },
+  "response": {
+    "status": 200,
+    "headers": {"Content-Type": "application/json; charset=utf-8"},
+    "bodyFileName": "area-moscow.json"
+  }
+}

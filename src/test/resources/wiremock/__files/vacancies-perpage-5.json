@@ -1,0 +1,13 @@
+{
+  "items": [
+    {"id": "100000001", "name": "Java Developer", "alternate_url": "https://hh.ru/vacancy/100000001", "salary": null, "employer": {"id": "1455", "name": "Яндекс"}, "area": {"id": "1", "name": "Москва"}, "archived": false},
+    {"id": "100000002", "name": "Senior Java", "alternate_url": "https://hh.ru/vacancy/100000002", "salary": null, "employer": {"id": "3529", "name": "СБЕР"}, "area": {"id": "1", "name": "Москва"}, "archived": false},
+    {"id": "100000003", "name": "Java Backend", "alternate_url": "https://hh.ru/vacancy/100000003", "salary": null, "employer": {"id": "78638", "name": "Тинькофф"}, "area": {"id": "2", "name": "Санкт-Петербург"}, "archived": false},
+    {"id": "100000004", "name": "Java SDET", "alternate_url": "https://hh.ru/vacancy/100000004", "salary": null, "employer": {"id": "1455", "name": "Яндекс"}, "area": {"id": "1", "name": "Москва"}, "archived": false},
+    {"id": "100000005", "name": "Lead Java", "alternate_url": "https://hh.ru/vacancy/100000005", "salary": null, "employer": {"id": "3529", "name": "СБЕР"}, "area": {"id": "1", "name": "Москва"}, "archived": false}
+  ],
+  "found": 1234,
+  "pages": 247,
+  "page": 0,
+  "per_page": 5
+}

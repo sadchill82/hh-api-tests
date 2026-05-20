@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "1455",
+      "name": "Яндекс",
+      "url": "https://api.hh.ru/employers/1455",
+      "alternate_url": "https://hh.ru/employer/1455",
+      "trusted": true,
+      "type": "company"
+    },
+    {
+      "id": "1740",
+      "name": "Яндекс Маркет",
+      "url": "https://api.hh.ru/employers/1740",
+      "alternate_url": "https://hh.ru/employer/1740",
+      "trusted": true,
+      "type": "company"
+    }
+  ],
+  "found": 12,
+  "pages": 1,
+  "page": 0,
+  "per_page": 20
+}
