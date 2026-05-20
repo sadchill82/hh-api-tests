@@ -23,22 +23,24 @@
 
 ## 📁 Структура проекта
 
-- `hh-api-tests/`
-  ├─ `build.gradle.kts`
-  ├─ `gradlew / gradlew.bat`
-  └─ `src/test/`
-  &nbsp;&nbsp;&nbsp;&nbsp;├─ `java/guru/qa/hhapi/`
-  &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;├─ `api/` — Step-классы (Vacancy/Area/Employer/DictionaryApi)
-  &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;├─ `config/` — ApiConfig + Project
-  &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;├─ `helpers/` — CustomAllureRestAssured
-  &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;├─ `models/` — Vacancy, VacanciesResponse, Salary, Employer, Area
-  &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;├─ `specs/` — HhSpecs
-  &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;├─ `support/` — WireMockServerHolder
-  &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─ `tests/` — BaseApiTest + 5 классов тестов
-  &nbsp;&nbsp;&nbsp;&nbsp;└─ `resources/`
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `config/prod.properties`
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ `tpl/` — http-request.ftl, http-response.ftl
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ `wiremock/` — mappings + __files
+```
+hh-api-tests/
+├─ build.gradle.kts
+├─ gradlew, gradlew.bat
+└─ src/test/
+   ├─ java/guru/qa/hhapi/
+   │  ├─ api/                — Step-классы: Vacancy/Area/Employer/DictionaryApi
+   │  ├─ config/             — ApiConfig + Project
+   │  ├─ helpers/            — CustomAllureRestAssured
+   │  ├─ models/             — Vacancy, VacanciesResponse, Salary, Employer, Area
+   │  ├─ specs/              — HhSpecs (request / response)
+   │  ├─ support/            — WireMockServerHolder
+   │  └─ tests/              — BaseApiTest + 5 классов тестов
+   └─ resources/
+      ├─ config/prod.properties
+      ├─ tpl/                — http-request.ftl, http-response.ftl
+      └─ wiremock/           — mappings + __files
+```
 
 ---
 
@@ -105,9 +107,3 @@ WireMock поднимается в `@BeforeAll` на случайном порт
 | **DictionaryTests** | experience, employment, currency |
 | **EmployerTests** | поиск по компании |
 | **NegativeApiTests** | 404 для `GET /vacancies/0`, 400 для `per_page=999` |
-
----
-
-## 📃 Лицензия
-
-Проект создан в рамках курса **QA.Guru** (Java Base) и предназначен для обучения.
