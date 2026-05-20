@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import guru.qa.hhapi.config.Project;
 import guru.qa.hhapi.support.WireMockServerHolder;
 import io.restassured.RestAssured;
 import io.restassured.config.ObjectMapperConfig;
@@ -13,7 +14,11 @@ public abstract class BaseApiTest {
 
     @BeforeAll
     static void configure() {
-        RestAssured.baseURI = WireMockServerHolder.baseUrl();
+        if (Project.isLive()) {
+            RestAssured.baseURI = Project.CONFIG.baseUri();
+        } else {
+            RestAssured.baseURI = WireMockServerHolder.baseUrl();
+        }
         RestAssured.config = RestAssured.config().objectMapperConfig(
                 ObjectMapperConfig.objectMapperConfig().jackson2ObjectMapperFactory(
                         (type, charset) -> new ObjectMapper()

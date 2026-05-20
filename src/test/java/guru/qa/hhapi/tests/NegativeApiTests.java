@@ -7,15 +7,19 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledIfSystemProperty;
 
 import static guru.qa.hhapi.specs.HhSpecs.request;
 import static guru.qa.hhapi.specs.HhSpecs.status;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
+// Проверяют конкретные shape ответов hh.ru на ошибочные запросы.
+// На живом API структура ошибок может отличаться, поэтому гоняем только в mock-режиме.
 @Epic("api.hh.ru — Негативные кейсы")
 @Feature("Обработка ошибок")
 @Owner("sadchill82")
+@DisabledIfSystemProperty(named = "env", matches = "live", disabledReason = "Mock-only error-shape assertions")
 public class NegativeApiTests extends BaseApiTest {
 
     @Test

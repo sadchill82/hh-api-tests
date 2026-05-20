@@ -14,8 +14,12 @@ public final class Project {
 
     private static ApiConfig readConfig() {
         Map<String, String> ctx = new HashMap<>();
-        ctx.put("env", System.getProperty("env", "prod"));
+        ctx.put("env", System.getProperty("env", "mock"));
         return ConfigFactory.create(ApiConfig.class, ctx);
+    }
+
+    public static boolean isLive() {
+        return "live".equalsIgnoreCase(System.getProperty("env", "mock"));
     }
 
     public static boolean hasHhToken() {

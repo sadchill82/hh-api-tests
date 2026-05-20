@@ -19,15 +19,23 @@ public final class HhSpecs {
     }
 
     public static RequestSpecification request() {
-        return new RequestSpecBuilder()
-                .setBaseUri(WireMockServerHolder.baseUrl())
+        RequestSpecBuilder b = new RequestSpecBuilder()
+                .setBaseUri(baseUri())
                 .setAccept(ContentType.JSON)
                 .addHeader("HH-User-Agent", Project.CONFIG.userAgent())
                 .addFilter(CustomAllureRestAssured.withTemplates())
                 .log(LogDetail.URI)
                 .log(LogDetail.METHOD)
-                .log(LogDetail.PARAMS)
-                .build();
+                .log(LogDetail.PARAMS);
+
+        if (Project.isLive() && Project.hasHhToken()) {
+            b.addHeader("Authorization", "Bearer " + Project.CONFIG.hhToken());
+        }
+        return b.build();
+    }
+
+    private static String baseUri() {
+        return Project.isLive() ? Project.CONFIG.baseUri() : WireMockServerHolder.baseUrl();
     }
 
     public static ResponseSpecification ok() {
