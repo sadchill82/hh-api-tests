@@ -1,5 +1,7 @@
 # 🌐 hh.ru — API Automated Tests
 
+<img alt="hh.ru" src="images/logo.svg" width="120">
+
 Автоматизированные API-тесты для эндпоинтов hh.ru, реализованные на **REST-assured**, **JUnit 5**, **Gradle** и **Allure**. Модели на **Lombok**, спецификации на **RequestSpecBuilder**, кастомные Allure-шаблоны для request/response.
 
 Часть дипломного проекта **QA.Guru** (Java Base): [UI](https://github.com/sadchill82/hh-ui-tests) / API / [Mobile](https://github.com/sadchill82/hh-mobile-tests) / [Manual](https://github.com/sadchill82/hh-manual-tests).
