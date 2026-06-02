@@ -20,6 +20,7 @@
 | [![Lombok](https://img.shields.io/badge/Lombok-1.18-BC4521?logo=lombok&logoColor=white)](https://projectlombok.org/) | Аннотации для моделей |
 | [![WireMock](https://img.shields.io/badge/WireMock-3.10-FF6C0C?logo=wiremock&logoColor=white)](https://wiremock.org/) | Mock-сервер для стабов |
 | [![Jackson](https://img.shields.io/badge/Jackson-2.18-000000?logo=apachemaven&logoColor=white)](https://github.com/FasterXML/jackson) | Сериализация / snake_case |
+| [![Jenkins](https://img.shields.io/badge/Jenkins-CI-D24939?logo=jenkins&logoColor=white)](https://jenkins.autotests.cloud/) | Continuous Integration |
 
 ---
 
@@ -29,6 +30,7 @@
 hh-api-tests/
 ├─ build.gradle.kts
 ├─ gradlew, gradlew.bat
+├─ images/                   — скриншоты Jenkins/Allure/Telegram для README
 └─ src/test/
    ├─ java/guru/qa/hhapi/
    │  ├─ api/                — Step-классы: Vacancy/Area/Employer/DictionaryApi
@@ -61,7 +63,7 @@ hh-api-tests/
 ./gradlew test
 ```
 
-WireMock поднимается в `@BeforeAll` на случайном порту, выключается shutdown-хуком. Внешний сервис не нужен, тесты гарантированно зелёные.
+WireMock поднимается в `@BeforeAll` на случайном порту, выключается shutdown-хуком. Внешний сервис не нужен.
 
 ### ▶️ Live-режим (api.hh.ru)
 
@@ -89,18 +91,16 @@ WireMock поднимается в `@BeforeAll` на случайном порт
 2. Получить токен через `client_credentials` grant в PowerShell:
 
 ```powershell
-$response = Invoke-RestMethod -Method POST -Uri "https://hh.ru/oauth/token" `
+$r = Invoke-RestMethod -Method POST -Uri "https://hh.ru/oauth/token" `
     -Headers @{ "User-Agent" = "hh-tests/1.0 (sadchill82@yandex.ru)" } `
     -Body @{
         grant_type    = "client_credentials"
         client_id     = "ВАШ_CLIENT_ID"
         client_secret = "ВАШ_CLIENT_SECRET"
     }
-$env:HH_TOKEN = $response.access_token
-[Environment]::SetEnvironmentVariable("HH_TOKEN", $response.access_token, "User")
+$env:HH_TOKEN = $r.access_token
+[Environment]::SetEnvironmentVariable("HH_TOKEN", $r.access_token, "User")
 ```
-
-Срок жизни токена — обычно 30 дней. Скрипт можно сохранить как `get-token.ps1` (в `.gitignore`) и перезапускать при истечении.
 
 ---
 
@@ -116,7 +116,19 @@ WireMock-фикстуры построены один в один под схе�
 
 ---
 
-## 📊 Allure-отчёт
+## 📊 Jenkins и Allure
+
+**Jenkins Job:**
+[Перейти к Jenkins](https://jenkins.autotests.cloud/job/C39-sadchill82-hh-api-tests/)
+
+**Allure Report:**
+[Перейти к Allure](https://jenkins.autotests.cloud/job/C39-sadchill82-hh-api-tests/allure)
+
+### Скриншот Allure-отчёта
+
+![Allure report](images/allure-report.png)
+
+### Генерация отчёта локально
 
 ```bash
 ./gradlew allureServe
